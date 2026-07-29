@@ -20,11 +20,89 @@ main {
 }
 
 header {
-    color: #fff;
     display: flex;
     flex-direction: column;
+    gap: 0.75rem   ;
     background-color: #0B1E33;
+    align-items: center;
+    color: #fff;
 }
+
+header .brand-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+header .brand-section img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+header .brand-section h1 {
+    font-size: 2rem;
+    margin: 0;
+    text-align: center;
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+header nav ul a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    padding: 0.5rem 0.75rem;
+    min-width: 120px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+header nav ul a:hover {
+    background-color: #1B4F82;
+}
+
+@media (min-width: 720px) {
+    header nav ul {
+        flex-direction: row;
+    }
+}
+@media (min-width: 1024px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0.5rem 1rem;
+    }
+
+    header .brand-section {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+}
+
+main .intro {
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    align-content: center;
+    margin: 1.7rem;
+    padding: 0.5rem;
+    width: 75%;
+}
+
+
+
+
+
 
 
 
