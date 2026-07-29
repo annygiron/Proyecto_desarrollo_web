@@ -101,7 +101,7 @@ main .intro {
     width: 75%;
 }
 
-/* Contenedor de las tarjetas */
+
 .content {
     display: flex;
     flex-direction: column;
@@ -143,7 +143,7 @@ main .intro {
     font-size: 1.25rem;
 }
 
-/* card_body: empuja el footer hacia abajo y empareja alturas entre tarjetas */
+
 .content section .card_body {
     flex: 1;
     display: flex;
@@ -152,7 +152,7 @@ main .intro {
 
 .content section .card_body p {
     text-align: left;
-    /* antes era "justify", causaba espacios raros entre palabras */
+
 }
 
 .content section .card_body p span {
@@ -177,13 +177,11 @@ main .intro {
     text-decoration: none;
 }
 
-/* Tablet: tarjetas en fila, 2 por línea aprox */
 @media (min-width: 720px) {
     .content {
         flex-direction: row;
         flex-wrap: wrap;
         align-items: stretch;
-        /* iguala la altura de todas las tarjetas en la misma fila */
         gap: 1rem;
     }
 
@@ -194,7 +192,6 @@ main .intro {
     }
 }
 
-/* Computadora: tarjetas en fila, 3 por línea aprox */
 @media (min-width: 1024px) {
     .content {
         gap: 1.5rem;
