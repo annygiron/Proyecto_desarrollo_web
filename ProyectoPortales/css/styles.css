@@ -2,12 +2,15 @@
     box-sizing: border-box;
 }
 
-<<<<<<< Updated upstream
+
 head {
     color: #333;
-=======
+}
+
+
+
 body {
     min-height: 100vh;
-    
->>>>>>> Stashed changes
 }
+
+
