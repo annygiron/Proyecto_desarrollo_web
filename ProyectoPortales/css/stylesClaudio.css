@@ -13,6 +13,8 @@ body {
 footer {
     background-color: #000;
     color: #fff;
+    text-align: center;
+    padding: 1rem;
 }
 
 main {
@@ -22,7 +24,7 @@ main {
 header {
     display: flex;
     flex-direction: column;
-    gap: 0.75rem   ;
+    gap: 0.75rem;
     background-color: #0B1E33;
     align-items: center;
     color: #fff;
@@ -75,6 +77,7 @@ header nav ul a:hover {
         flex-direction: row;
     }
 }
+
 @media (min-width: 1024px) {
     header {
         flex-direction: row;
@@ -86,7 +89,6 @@ header nav ul a:hover {
         flex-direction: row;
         gap: 1rem;
     }
-
 }
 
 main .intro {
@@ -99,10 +101,107 @@ main .intro {
     width: 75%;
 }
 
+/* Contenedor de las tarjetas */
+.content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
 
+.content section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 70%;
+    padding: 0.75rem;
+    max-width: 320px;
+    background-color: #1B4F82;
+    border: 1px solid #000;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 3px 3px 4px #161616;
+    align-items: center;
+    gap: 0.5rem;
+    color: #fff;
+}
 
+.content section img {
+    height: 220px;
+    width: 240px;
+    margin: 0.25rem;
+    padding: 0.25rem;
+    border-radius: 10px;
+}
 
+.content section div .card_header_label {
+    font-style: italic;
+    text-align: center;
+    font-size: 1.25rem;
+}
 
+/* card_body: empuja el footer hacia abajo y empareja alturas entre tarjetas */
+.content section .card_body {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
 
+.content section .card_body p {
+    text-align: left;
+    /* antes era "justify", causaba espacios raros entre palabras */
+}
 
+.content section .card_body p span {
+    color: #e4a60b;
+}
 
+.content section .card_footer {
+    gap: 1.75rem;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    color: #e4a60b;
+    padding: 0.30rem .80rem;
+}
+
+.content section .card_footer .card_footer_action a {
+    color: #fff;
+    padding: 0.25rem 0.75rem;
+    box-shadow: 3px 3px 5px #000;
+    background-color: #0D2B4E;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+/* Tablet: tarjetas en fila, 2 por línea aprox */
+@media (min-width: 720px) {
+    .content {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: stretch;
+        /* iguala la altura de todas las tarjetas en la misma fila */
+        gap: 1rem;
+    }
+
+    .content section {
+        margin-left: 0;
+        margin-right: 0;
+        width: 45%;
+    }
+}
+
+/* Computadora: tarjetas en fila, 3 por línea aprox */
+@media (min-width: 1024px) {
+    .content {
+        gap: 1.5rem;
+    }
+
+    .content section {
+        width: 30%;
+        max-width: 320px;
+    }
+}
