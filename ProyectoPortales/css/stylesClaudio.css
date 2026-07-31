@@ -92,15 +92,6 @@ header nav ul a:hover {
     }
 }
 
-main .intro {
-    display: flex;
-    align-items: center;
-    text-align: justify;
-    align-content: center;
-    margin: 1.7rem;
-    padding: 0.5rem;
-    width: 75%;
-}
 
 
 .content {
@@ -127,7 +118,7 @@ main .intro {
     box-shadow: 3px 3px 4px #161616;
     align-items: center;
     gap: 0.5rem;
-    color:#1B4F82;
+    color:#0B1E33;
 }
 
 .content section img {
@@ -139,10 +130,9 @@ main .intro {
 }
 
 .content section div .card_header_label {
-    font-style: italic;
     text-align: center;
     font-size: 1.25rem;
-    color: #000;
+    color: #1B4F82;
 }
 
 
@@ -157,18 +147,23 @@ main .intro {
 
 }
 
-.content section .card_body p span {
-    color: #e4a60b;
-}
 
 .content section .card_footer {
     gap: 1.75rem;
     align-items: center;
+    text-align: center;
     display: flex;
     flex-direction: column;
-    color: #e4a60b;
+    color: #927428;
     padding: 0.30rem .80rem;
+    font-size: 1.5rem;
 }
+
+.content section .card_footer span {
+    display: block;
+    color: #0B1E33;
+}
+
 
 .content section .card_footer .card_footer_action a {
     color: #fff;
