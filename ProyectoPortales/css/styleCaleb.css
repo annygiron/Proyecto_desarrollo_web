@@ -183,39 +183,73 @@ header nav ul li a:hover {
     margin-bottom: 1rem;
     margin-left: auto;
     margin-right: auto;
+    
 }
 
 
+.contenido .catalogo-header {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    
+}
+
 .contenido .venta{
-    width:40%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align:center;
+    text-align: center;
     font-size: 1.5rem;
     border-radius: 7px;
     background-color: #14406E;
     color: #ffffff;
+    padding: 0.5rem 1rem;
+    margin: 0;
 }
 
 .contenido .ver{
-    position: absolute;
-    top: 98%;
-    right: 6%;
-    transform: translateY(-50%);
-    width: auto;
-    text-align:center;
+    align-self: flex-end;
+    text-align: center;
     font-size: 1.5rem;
     border-radius: 7px;
     background-color: #14406E;
     color: #ffffff;
     padding: 0.25rem 0.75rem;
+    margin: 0;
 }
+
+@media (min-width: 720px) {
+    .contenido .catalogo-header {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        gap: 1rem;
+    }
+    .contenido .venta{
+        width: 60%;
+        margin: 0 auto;
+        padding: 0.5rem 1rem;
+    }
+    .contenido .ver{
+        position: absolute;
+        right: 0;
+        top: 50%;
+    }
+}
+
+@media (min-width: 1025px){
+    .contenido .venta{
+        width: 50%;
+        margin: 0 auto;
+        padding: 0.5rem 1rem;
+    }
+}
+
 
 .contenido h3 a{
     color: #fff;
     text-decoration: none;
 }
-
 
 .contenido .Targetas_cuadricula .Targeta{
     justify-content: center;
@@ -225,6 +259,7 @@ header nav ul li a:hover {
     color: #ffffff;
     font-size: 1.2rem;
     background-color: #14406E;
+    /*border: 0.5px solid #0B1E33;*/
 }
 
 
@@ -257,9 +292,116 @@ header nav ul li a:hover {
     flex-wrap: wrap;
 }
 
+.contenido2 {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+}
 
+.reseñas {
+    font-size: 1.5rem;
+    margin-bottom: 0px;
+}
 
+.cuerpo_nosotros {
+    background-color: #14406E;
+    width: 90%;
+    padding: 1.5rem;
+    border-radius: 7px;
+    box-shadow: 3px 3px 7px #000;
+}
 
+.nosotros{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.cuerpo_nosotros p{
+    margin-left: 1rem;
+    color: #fff;
+}
+
+.saber {
+    background-color: #14406E;
+    display: inline-block;
+    justify-content: center;
+    padding: 0.75rem 1.2rem;
+    border-radius: 7px;
+    margin-top: 1rem;
+    box-shadow: 3px 3px 7px #0B1E33;
+
+}
+
+.contenido2 a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.banner_contacto {
+    background-color: #14406E;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 7px;
+    box-shadow: 3px 3px 7px #000;
+}
+
+.banner_contacto h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.banner_contacto p {
+    margin: 0.5rem 0;
+}
+
+.banner_contacto .datos_contacto {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+footer .grid {
+    padding: 1.5rem 1rem;
+}
+
+footer .row > div {
+    padding: 0 1rem;
+    margin-bottom: 1.5rem;
+}
+
+footer h4 {
+    font-size: 1.1rem;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li {
+    margin-bottom: 0.5rem;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin: 0.25rem 0;
+}
+
+.footer_derechos {
+    text-align: center;
+    margin-top: 1rem;
+}
 
 .grid .row .col-1 {flex-basis: calc(100%/12*1);}
 .grid .row .col-2 {flex-basis: calc(100%/12*2);}
