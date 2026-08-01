@@ -116,9 +116,11 @@ header nav ul a:hover {
     background-color: #1B4F82;
 }
 
-@media (min-width: 720px) {
-    header nav ul {
+@media (min-width:720px) { 
+    header nav ul{
         flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
 
