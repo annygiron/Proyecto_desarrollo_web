@@ -58,6 +58,7 @@ header nav ul {
     list-style: none;
     padding: 0px;
     margin: 0px;
+    align-items: center;
 }
 
 header nav ul a {
