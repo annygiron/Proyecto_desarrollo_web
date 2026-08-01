@@ -90,25 +90,7 @@ header nav ul li a:hover {
     background-color: #444;
 }
 
-@media (min-width:720px) { 
-    header nav ul{
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-}
 
-@media (min-width:1025px) {
-    header {
-        flex-direction: row;
-        align-items: center;
-    }
-    header .brand-section{
-        width: 280px;
-        flex-direction: row;
-        justify-content: start;
-    }
-}
 
 .hero-panel {
     position: relative;
@@ -138,15 +120,20 @@ header nav ul li a:hover {
     align-items: center;
     width: 360px;
     padding: 2rem;
-    background-color:  rgba(115, 135, 233, 0.657);
     position: absolute;
     top:50%; 
     left:50%;
     transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.hero-panel .hero-call-to-action h2 {
+    font-size: 2rem;
+    margin: 0;
 }
 
 .hero-panel .hero-call-to-action .btn-cta{
-    background-color: #2d1172;
+    background-color: #1D5C8C;
     color: #fff;
     text-decoration: none;
     padding: 0.75rem 1.2rem;
@@ -154,7 +141,32 @@ header nav ul li a:hover {
     box-shadow: 3px 3px 5px #000;
 }
 
+@media (min-width:720px) { 
+    header nav ul{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
 
+@media (min-width:1025px) {
+    header {
+        flex-direction: row;
+        align-items: center;
+    }
+    header .brand-section{
+        width: 280px;
+        flex-direction: row;
+        justify-content: start;
+    }
+    .hero-panel .hero-call-to-action {
+        width: 700px;
+    }
+    .hero-panel .hero-call-to-action h2 {
+        font-size: 3rem;
+    }
+    
+}
 
 .carusel{
     position: relative;
