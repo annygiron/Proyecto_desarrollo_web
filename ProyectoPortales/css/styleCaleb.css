@@ -11,7 +11,7 @@ html {
 body {
     display:flex;
     flex-direction:column;
-    background-color: #1B4F82;
+    background-color: #ffffff;
     padding: 0px;
     margin: 0px;
     min-height: 100vh; 
@@ -314,6 +314,7 @@ header nav ul li a:hover {
     margin-left: 2rem;
     margin-right: 2rem;
     margin-bottom: 2rem;
+    color: #0B1E33;
 }
 
 .reseñas {
@@ -332,6 +333,7 @@ header nav ul li a:hover {
 .nosotros{
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    color: #0B1E33;
 }
 
 .cuerpo_nosotros p{
@@ -361,6 +363,7 @@ header nav ul li a:hover {
     padding: 2rem;
     border-radius: 7px;
     box-shadow: 3px 3px 7px #000;
+    color: #fff;
 }
 
 .banner_contacto h3 {
@@ -425,6 +428,7 @@ footer p {
     font-size: 3rem;
     text-align: center;
     margin-bottom: 0.25rem;
+    color: #0B1E33;
 }
 
 .subtitulo_pagina {
@@ -432,6 +436,7 @@ footer p {
     font-size: 2rem;
     margin-top: 0;
     margin-bottom: 1rem;
+    color: #0B1E33;
 }
 
 .imagen_nosotros {
@@ -441,6 +446,10 @@ footer p {
     border-radius: 7px;
     box-shadow: 3px 3px 7px #000;
     margin-bottom: 1rem;
+}
+
+.banner_contacto .duda {
+    color: #af8b2e;
 }
 
 .grid .row .col-1 {flex-basis: calc(100%/12*1);}
