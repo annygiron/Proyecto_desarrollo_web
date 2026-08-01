@@ -90,25 +90,7 @@ header nav ul li a:hover {
     background-color: #444;
 }
 
-@media (min-width:720px) { 
-    header nav ul{
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-}
 
-@media (min-width:1025px) {
-    header {
-        flex-direction: row;
-        align-items: center;
-    }
-    header .brand-section{
-        width: 280px;
-        flex-direction: row;
-        justify-content: start;
-    }
-}
 
 .hero-panel {
     position: relative;
@@ -138,15 +120,20 @@ header nav ul li a:hover {
     align-items: center;
     width: 360px;
     padding: 2rem;
-    background-color:  rgba(115, 135, 233, 0.657);
     position: absolute;
     top:50%; 
     left:50%;
     transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.hero-panel .hero-call-to-action h2 {
+    font-size: 2rem;
+    margin: 0;
 }
 
 .hero-panel .hero-call-to-action .btn-cta{
-    background-color: #2d1172;
+    background-color: #1D5C8C;
     color: #fff;
     text-decoration: none;
     padding: 0.75rem 1.2rem;
@@ -154,7 +141,32 @@ header nav ul li a:hover {
     box-shadow: 3px 3px 5px #000;
 }
 
+@media (min-width:720px) { 
+    header nav ul{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
 
+@media (min-width:1025px) {
+    header {
+        flex-direction: row;
+        align-items: center;
+    }
+    header .brand-section{
+        width: 280px;
+        flex-direction: row;
+        justify-content: start;
+    }
+    .hero-panel .hero-call-to-action {
+        width: 700px;
+    }
+    .hero-panel .hero-call-to-action h2 {
+        font-size: 3rem;
+    }
+    
+}
 
 .carusel{
     position: relative;
@@ -259,9 +271,15 @@ header nav ul li a:hover {
     color: #ffffff;
     font-size: 1.2rem;
     background-color: #14406E;
-    /*border: 0.5px solid #0B1E33;*/
+    border-radius: 7px;
+    overflow: hidden;
+    box-shadow: 3px 3px 7px #0B1E33;
 }
 
+.Targetas_cuadricula .row > div {
+    padding: 0 0.5rem;
+    margin-bottom: 1rem;
+}
 
 .Targeta{
     height: 100%;
@@ -401,6 +419,28 @@ footer p {
 .footer_derechos {
     text-align: center;
     margin-top: 1rem;
+}
+
+.titulo_pagina {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 0.25rem;
+}
+
+.subtitulo_pagina {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.imagen_nosotros {
+    width: 90%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 7px;
+    box-shadow: 3px 3px 7px #000;
+    margin-bottom: 1rem;
 }
 
 .grid .row .col-1 {flex-basis: calc(100%/12*1);}
