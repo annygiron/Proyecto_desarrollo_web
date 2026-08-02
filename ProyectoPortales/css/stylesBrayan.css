@@ -5,23 +5,21 @@
 body {
     display: flex;
     flex-direction: column;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     min-height: 100vh;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-}
-
-footer {
-    background-color: #000000;
-    color: #ffffff;
-    text-align: center;
-    padding: 1rem;
-    margin-top: auto;
+    background-color: #f5f5f5;
+    gap: 0.75rem;
 }
 
 main {
     flex: 1;
+}
+
+
+header, footer {
+    background-color: #0B1E33;
+    color: #fff;
 }
 
 header {
@@ -30,8 +28,7 @@ header {
     gap: 0.75rem;
     background-color: #0B1E33;
     align-items: center;
-    color: #ffffff;
-    padding: 1rem;
+    color: #fff;
 }
 
 header .brand-section {
@@ -59,14 +56,15 @@ header nav ul {
     display: flex;
     flex-direction: column;
     list-style: none;
-    padding: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
+    align-items: center;
 }
 
 header nav ul a {
     display: inline-block;
     text-decoration: none;
-    color: #ffffff;
+    color: #fff;
     padding: 0.5rem 0.75rem;
     min-width: 120px;
     text-align: center;
@@ -77,121 +75,11 @@ header nav ul a:hover {
     background-color: #1B4F82;
 }
 
-main .intro {
-    display: flex;
-    align-items: center;
-    text-align: justify;
-    margin: 1.7rem auto;
-    padding: 0.5rem;
-    width: 75%;
-}
-
-.content {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
-    padding: 1rem;
-}
-
-.card {
-    display: flex;
-    flex-direction: column;
-    width: 280px;
-    padding: 0.75rem;
-    background-color: #1B4F82;
-    border: 1px solid #000000;
-    box-shadow: 3px 3px 4px #161616;
-    align-items: center;
-    gap: 0.5rem;
-    color: #ffffff;
-    border-radius: 8px;
-}
-
-.card_header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
-
-.card_header img {
-    height: 200px;
-    width: 100%;
-    max-width: 240px;
-    margin: 0.25rem;
-    padding: 0.25rem;
-    border-radius: 10px;
-    background-color: #ffffff;
-    object-fit: contain;
-}
-
-.card_header_label {
-    font-style: italic;
-    text-align: center;
-    font-size: 1.25rem;
-    font-weight: bold;
-    margin-top: 0.5rem;
-}
-
-.card_body {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    width: 100%;
-}
-
-.card_body p {
-    text-align: left;
-    margin: 0;
-    line-height: 1.4;
-}
-
-.card_body p span {
-    color: #e4a60b;
-    font-weight: bold;
-}
-
-.card_footer {
-    gap: 0.75rem;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    color: #e4a60b;
-    padding: 0.30rem 0.80rem;
-    width: 100%;
-}
-
-.card_footer_price {
-    font-weight: bold;
-}
-
-.card_footer_action a {
-    color: #ffffff;
-    padding: 0.4rem 1.2rem;
-    box-shadow: 3px 3px 5px #000000;
-    background-color: #0D2B4E;
-    border-radius: 20px;
-    text-decoration: none;
-    display: inline-block;
-    transition: background-color 0.3s ease;
-}
-
-.card_footer_action a:hover {
-    background-color: #0B1E33;
-}
-
 @media (min-width: 720px) {
     header nav ul {
         flex-direction: row;
-    }
-
-    .content {
-        flex-direction: row;
         flex-wrap: wrap;
-        align-items: stretch;
+        justify-content: center;
     }
 }
 
@@ -199,11 +87,278 @@ main .intro {
     header {
         flex-direction: row;
         justify-content: space-between;
-        padding: 0.5rem 2rem;
+        padding: 0.5rem 1rem;
     }
 
     header .brand-section {
         flex-direction: row;
         gap: 1rem;
     }
+}
+
+main .intro {
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    margin: 1.7rem auto;
+    padding: 0.5rem;
+    width: 90%;
+    max-width: 1200px;
+    color: #0B1E33;
+}
+
+.content {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0.5rem 0.75rem 2rem;
+    text-align: center;
+}
+
+.product-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.MARCA_title {
+    width: 70%;
+    height: 50px;
+    background-color: #1B4F82;
+    border-radius: 8px;
+    flex: 100%;
+}
+
+.MARCA_title h2 {
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto 1rem;
+    padding: 0.6rem;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.content .card {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 70%;
+    padding: 0.75rem;
+    max-width: 320px;
+    background-color: #fff;
+    border: 1px solid #000;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 3px 3px 4px #161616;
+    align-items: center;
+    gap: 0.5rem;
+    color: #0B1E33;
+    border-radius: 4px;
+}
+
+.content .card_header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.content .card_header img {
+    height: 220px;
+    width: 240px;
+    margin: 0.25rem;
+    padding: 0.25rem;
+    border-radius: 10px;
+    object-fit: contain;
+    background-color: #ffffff;
+}
+
+.content .card_header_label {
+    text-align: center;
+    font-size: 1.25rem;
+    color: #1B4F82;
+    font-weight: bold;
+}
+
+.content .card_body {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.content .card_body p {
+    text-align: left;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.content .card_body p span {
+    color: #927428;
+    font-weight: bold;
+}
+
+.content .card_footer {
+    gap: 1rem;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    color: #927428;
+    padding: 0.30rem .80rem;
+    font-size: 1.15rem;
+    width: 100%;
+}
+
+.content .card_footer_price {
+    font-weight: bold;
+}
+
+.content .card_footer .card_footer_action a {
+    color: #fff;
+    padding: 0.4rem 1.2rem;
+    box-shadow: 3px 3px 5px #000;
+    background-color: #0D2B4E;
+    border-radius: 20px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.content .card_footer .card_footer_action a:hover {
+    background-color: #1B4F82;
+}
+
+@media (min-width: 720px) {
+    .product-group {
+        gap: 1rem;
+    }
+
+    .content .card {
+        margin-left: 0;
+        margin-right: 0;
+        width: 45%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .product-group {
+        gap: 1.5rem;
+    }
+
+    .content .card {
+        width: 30%;
+        max-width: 320px;
+    }
+}
+
+/* ---------- FOOTER (mismo estilo en columnas que Baterías) ---------- */
+
+footer .grid {
+    padding: 1.5rem 1rem;
+}
+
+footer .row > div {
+    padding: 0 1rem;
+    margin-bottom: 1.5rem;
+}
+
+footer h4 {
+    font-size: 1.1rem;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li {
+    margin-bottom: 0.5rem;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin: 0.25rem 0;
+}
+
+.footer_derechos {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* ---------- GRID UTILITY (igual que stylesClaudio.css) ---------- */
+
+.grid {
+    display: flex;
+    flex-direction: column;
+}
+
+.grid .row {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid .row .col-1 {flex-basis: calc(100%/12*1);}
+.grid .row .col-2 {flex-basis: calc(100%/12*2);}
+.grid .row .col-3 {flex-basis: calc(100%/12*3);}
+.grid .row .col-4 {flex-basis: calc(100%/12*4);}
+.grid .row .col-5 {flex-basis: calc(100%/12*5);}
+.grid .row .col-6 {flex-basis: calc(100%/12*6);}
+.grid .row .col-7 {flex-basis: calc(100%/12*7);}
+.grid .row .col-8 {flex-basis: calc(100%/12*8);}
+.grid .row .col-9 {flex-basis: calc(100%/12*9);}
+.grid .row .col-10 {flex-basis: calc(100%/12*10);}
+.grid .row .col-11 {flex-basis: calc(100%/12*11);}
+.grid .row .col-12 {flex-basis: 100%;}
+
+@media (min-width:720px) {
+    .grid .row .col-m-1 {flex-basis: calc(100%/12*1);}
+    .grid .row .col-m-2 {flex-basis: calc(100%/12*2);}
+    .grid .row .col-m-3 {flex-basis: calc(100%/12*3);}
+    .grid .row .col-m-4 {flex-basis: calc(100%/12*4);}
+    .grid .row .col-m-5 {flex-basis: calc(100%/12*5);}
+    .grid .row .col-m-6 {flex-basis: calc(100%/12*6);}
+    .grid .row .col-m-7 {flex-basis: calc(100%/12*7);}
+    .grid .row .col-m-8 {flex-basis: calc(100%/12*8);}
+    .grid .row .col-m-9 {flex-basis: calc(100%/12*9);}
+    .grid .row .col-m-10 {flex-basis: calc(100%/12*10);}
+    .grid .row .col-m-11 {flex-basis: calc(100%/12*11);}
+    .grid .row .col-m-12 {flex-basis: 100%;}
+}
+
+@media (min-width:1025px) {
+    .grid .row .col-l-1 {flex-basis: calc(100%/12*1);}
+    .grid .row .col-l-2 {flex-basis: calc(100%/12*2);}
+    .grid .row .col-l-3 {flex-basis: calc(100%/12*3);}
+    .grid .row .col-l-4 {flex-basis: calc(100%/12*4);}
+    .grid .row .col-l-5 {flex-basis: calc(100%/12*5);}
+    .grid .row .col-l-6 {flex-basis: calc(100%/12*6);}
+    .grid .row .col-l-7 {flex-basis: calc(100%/12*7);}
+    .grid .row .col-l-8 {flex-basis: calc(100%/12*8);}
+    .grid .row .col-l-9 {flex-basis: calc(100%/12*9);}
+    .grid .row .col-l-10 {flex-basis: calc(100%/12*10);}
+    .grid .row .col-l-11 {flex-basis: calc(100%/12*11);}
+    .grid .row .col-l-12 {flex-basis: 100%;}
 }
