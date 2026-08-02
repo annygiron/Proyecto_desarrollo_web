@@ -262,8 +262,6 @@ main .intro {
     }
 }
 
-/* ---------- FOOTER (mismo estilo en columnas que Baterías) ---------- */
-
 footer .grid {
     padding: 1.5rem 1rem;
 }
@@ -306,8 +304,6 @@ footer p {
     text-align: center;
     margin-top: 1rem;
 }
-
-/* ---------- GRID UTILITY (igual que stylesClaudio.css) ---------- */
 
 .grid {
     display: flex;
