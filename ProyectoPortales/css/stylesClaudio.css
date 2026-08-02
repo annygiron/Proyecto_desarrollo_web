@@ -166,15 +166,12 @@ header nav ul a:hover {
 }
 
  .services {
-    width: 80%;
+    width: 90%;
+    max-width: 1400px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    align-content: center;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 1rem auto;
     gap: 0.5rem;
 }
 .title {
@@ -190,8 +187,11 @@ header nav ul a:hover {
 
 }
 
+.services .servicio {
+
+    width: 100%;
+}
 .services .servicio .service-title {
-    cursor:pointer;
     position: relative;
     /*background-color: #1B4F82;*/
     border-radius: 4px;
@@ -210,6 +210,7 @@ header nav ul a:hover {
 }
 
 .services  .service-title .more-button{
+    cursor:pointer;
     position:absolute;
     top: 0.4rem;
     left: 83rem;
@@ -229,12 +230,21 @@ header nav ul a:hover {
     border-radius: 3px;
 }
 
+
 .services .service-title .more-button div.side1{
     transform: rotate(90deg)  ;
 }
 
 .services .service-title .more-button div.side2{
     transform: rotate(180deg) translateY(11.5px);
+}
+
+.services .service-title .more-button.minimize .side1 {
+    transform: rotate(0deg);
+}
+
+.services .service-title .more-button.minimize .side2 {
+    transform: rotate(0deg) translateY(-10);
 }
 
 
@@ -252,9 +262,13 @@ header nav ul a:hover {
 
 } 
 
-.services .hidden {
+.services  .hidden {
     display: none;
 
+}
+
+.services .service-body.hidden {
+    display: none;
 }
 
 .LTH, .AMERICA, .CRONOS, .ACDELCO {
