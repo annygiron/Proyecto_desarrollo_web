@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Hibur+Mono&family=Roboto:ital,wght@0,100..900;1,100..900&family=Yuyu&display=swap');
+*{
+    box-sizing: border-box;
+}
+
+.blog-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.blog-card .Targeta-header img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Botón de leer articulo dentro de las tarjetas */
+.btn-blog {
+    display: inline-block;
+    background-color: #0D2B4E;
+    color: #ffffff !important;
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    text-decoration: none;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    transition: background-color 0.3s ease;
+}
+
+.btn-blog:hover {
+    background-color: #1B4F82;
+}
