@@ -143,6 +143,7 @@ header nav ul a:hover {
     max-width: 1500px;
     margin: 0 auto;
     padding: 0.5rem 0.75rem;
+    text-align: center;
 }
 
 .content section {
@@ -163,6 +164,47 @@ header nav ul a:hover {
     gap: 0.5rem;
     color:#0B1E33;
 }
+
+ .services {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+.title {
+    display: flex;
+    flex-direction: column;
+    padding: 0.25rem 0.75rem;
+    text-align: center;
+}
+
+.services span {
+    display: flex;
+    color: #927428;
+
+}
+
+.services .service-title {
+    background-color: #1B4F82;
+    border-radius: 4px;
+    padding: 0.25rem 0.75rem;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+
+}
+
+.services .service-title h2 {
+    color: #fff;
+    margin: 0px;
+    text-align: center;
+
+} 
 
 .LTH, .AMERICA, .CRONOS, .ACDELCO {
     display: flex;
