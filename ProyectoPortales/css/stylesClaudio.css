@@ -209,18 +209,22 @@ header nav ul a:hover {
     color: #000;
 }
 
+.services .servicio .service-title.active h2 {
+    color: #fff;
+}
+
 .services  .service-title .more-button{
-    cursor:pointer;
-    position:absolute;
-    top: 0.4rem;
-    left: 83rem;
-    width: 64px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
     height: 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap:0.5rem;
+    gap: 0.5rem;
 
 }
 .services .service-title .more-button div {
@@ -252,7 +256,13 @@ header nav ul a:hover {
     background-color: #1B4F82;
 }
 
+.services .servicio .service-title:hover h2 {
+    color: #fff;
+}
 
+.services .servicio .service-title.active {
+    background-color: #1B4F82;
+}
 
 .services .service-title h2 {
 
@@ -269,6 +279,63 @@ header nav ul a:hover {
 
 .services .service-body.hidden {
     display: none;
+}
+
+@media (min-width: 720px) {
+
+    .services {
+        width: 90%;
+    }
+
+    .services .servicio .service-title {
+        width: 100%;
+    }
+
+    .services .service-title .more-button {
+        width: 60px;
+        right: 0;
+    }
+
+    .services .service-title h2 {
+        font-size: 1.5rem;
+    }
+
+}
+
+@media (min-width: 320px) {
+
+    .services {
+        width: 95%;
+        margin: 1rem auto;
+    }
+
+    .services .servicio {
+        width: 100%;
+    }
+
+    .services .servicio .service-title {
+        width: 100%;
+        height: 55px;
+        padding: 0.25rem 3.5rem 0.25rem 0.5rem;
+    }
+
+    .services .service-title h2 {
+        font-size: 1rem;
+        margin: 5px;
+    }
+
+    .services .service-title .more-button {
+        top: 0;
+        right: 0;
+        width: 50px;
+        height: 55px;
+    }
+
+    .services .service-title .more-button div {
+        width: 1.2rem;
+        height: 3px;
+    }
+
 }
 
 .LTH, .AMERICA, .CRONOS, .ACDELCO {
