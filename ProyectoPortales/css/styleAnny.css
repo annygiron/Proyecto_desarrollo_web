@@ -89,27 +89,6 @@ header nav ul a:hover {
     }
 }
 
-.encabezado-intro {
-  background-color: #0D2B4E;
-  color: #ffffff;
-  padding: 50px 40px 40px;
-  text-align: center;
-}
-
-.encabezado-intro h2 {
-  font-size: 2.2rem;
-  margin-bottom: 12px;
-  letter-spacing: 0.5px;
-}
-
-.encabezado-intro p {
-  max-width: 750px;
-  margin: 0 auto;
-  font-size: 1.05rem;
-  line-height: 1.6;
-  color: #d7e2ec;
-}
-
 main {
   max-width: 900px;
   margin: 0 auto;
@@ -214,30 +193,7 @@ main {
   opacity: 0.85;
 }
 
-footer {
-  background-color: #0B1E33;
-  color: #ffffff;
-  text-align: center;
-  padding: 22px;
-  font-size: 0.95rem;
-}
-
-@media (max-width: 700px) {
-  .navbar {
-    flex-direction: column;
-    gap: 14px;
-  }
-  .navbar nav ul {
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .encabezado-intro h2 {
-    font-size: 1.7rem;
-  }
-}
-
-/* Página Carga y Diagnóstico*/
+/* ===== Página Carga y Diagnóstico ===== */
 .bloque-servicio {
   margin-bottom: 30px;
 }
@@ -294,4 +250,77 @@ footer {
   padding: 12px 16px;
   font-size: 0.95rem;
   border-top: 1px solid #14406E;
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: #0B1E33;
+  color: #ffffff;
+  padding: 22px;
+  font-size: 0.95rem;
+}
+
+footer .grid {
+    padding: 1.5rem 1rem;
+}
+
+footer .row > div {
+    padding: 0 1rem;
+    margin-bottom: 1.5rem;
+}
+
+footer h4 {
+    font-size: 1.1rem;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li {
+    margin-bottom: 0.5rem;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin: 0.25rem 0;
+}
+
+.footer_derechos {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* ===== Grid (solo lo que usa el footer: col-12, col-m-6, col-l-3) ===== */
+.grid {
+    display: flex;
+    flex-direction: column;
+}
+
+.grid .row {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid .row .col-12 {flex-basis: 100%;}
+
+@media (min-width:720px) {
+    .grid .row .col-m-6 {flex-basis: calc(100%/12*6);}
+}
+
+@media (min-width:1025px) {
+    .grid .row .col-l-3 {flex-basis: calc(100%/12*3);}
 }
