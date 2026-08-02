@@ -190,10 +190,10 @@ header nav ul a:hover {
 
 }
 
-.services .service-title {
+.services .servicio .service-title {
     cursor:pointer;
     position: relative;
-    background-color: #1B4F82;
+    /*background-color: #1B4F82;*/
     border-radius: 4px;
     padding: 0.25rem 0.75rem;
     align-items: center;
@@ -201,7 +201,12 @@ header nav ul a:hover {
     text-align: center;
     width: 1400px;
     height: 60px;
+    border: 1px solid #000 ;
+    transition: background-color 1.5s ease;
 
+}
+.services .servicio .service-title h2 {
+    color: #000;
 }
 
 .services  .service-title .more-button{
@@ -230,6 +235,11 @@ header nav ul a:hover {
 
 .services .service-title .more-button div.side2{
     transform: rotate(180deg) translateY(11.5px);
+}
+
+
+.services .servicio .service-title:hover  {
+    background-color: #1B4F82;
 }
 
 
