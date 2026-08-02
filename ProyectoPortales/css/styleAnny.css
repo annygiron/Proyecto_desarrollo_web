@@ -8,7 +8,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+/*preguntas frecuentes*/
 body {
   font-family: "Roboto" , "Arial", "sans-serif"; 
   background-color: #f4f6f8;
@@ -248,7 +248,7 @@ footer {
   }
 }
 
-
+/* Carga y Diagnóstico */
 
 .bloque-servicio {
   margin-bottom: 30px;
