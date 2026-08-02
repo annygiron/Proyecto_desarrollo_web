@@ -209,6 +209,10 @@ header nav ul a:hover {
     color: #000;
 }
 
+.services .servicio .service-title.active h2 {
+    color: #fff;
+}
+
 .services  .service-title .more-button{
     cursor:pointer;
     position:absolute;
@@ -252,7 +256,13 @@ header nav ul a:hover {
     background-color: #1B4F82;
 }
 
+.services .servicio .service-title:hover h2 {
+    color: #fff;
+}
 
+.services .servicio .service-title.active {
+    background-color: #1B4F82;
+}
 
 .services .service-title h2 {
 
