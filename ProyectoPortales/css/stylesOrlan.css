@@ -348,3 +348,14 @@ footer .footer_derechos {
         width: 55%;
     }
 }
+
+/*--------------------------------------------------------------*/
+/*Estilos para el enlace de WhatsApp*/
+.whatsapp_link {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.whatsapp_link:hover {
+    color: #af8b2e;
+}
