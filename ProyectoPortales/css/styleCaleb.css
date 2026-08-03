@@ -186,6 +186,68 @@ header nav ul li a:hover {
     flex-shrink: 0;
 }
 
+.trust-bar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 1.5rem 1rem;
+    background-color: #0B1E33;
+    border-top: 3px solid #af8b2e;
+}
+
+.trust-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+.trust-item img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
+.brands-row {
+    text-align: center;
+    padding: 2.5rem 1rem;
+    background-color: #fff;
+}
+
+.brands-title {
+    font-size: 2rem;
+    color: #14406E;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.brands-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.brands-grid img {
+    height: 100px;
+    width: auto;
+    max-width: 170px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.75;
+    transition: filter 0.2s, opacity 0.2s, transform 0.2s;
+}
+
+.brands-grid img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.05);
+}
+
 .contenido {
     width: 100%;
     max-width:90%;
@@ -342,7 +404,7 @@ header nav ul li a:hover {
 }
 
 .saber {
-    background-color: #14406E;
+    background-color: #0B1E33;
     display: inline-block;
     justify-content: center;
     padding: 0.75rem 1.2rem;
@@ -369,6 +431,7 @@ header nav ul li a:hover {
 .banner_contacto h3 {
     font-size: 1.8rem;
     margin-bottom: 0.5rem;
+    color: #af8b2e;
 }
 
 .banner_contacto p {
