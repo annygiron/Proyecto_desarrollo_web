@@ -237,15 +237,11 @@ header nav ul li a:hover {
     width: auto;
     max-width: 170px;
     object-fit: contain;
-    filter: grayscale(100%);
-    opacity: 0.75;
-    transition: filter 0.2s, opacity 0.2s, transform 0.2s;
+    transition: transform 0.2s;
 }
 
 .brands-grid img:hover {
-    filter: grayscale(0%);
-    opacity: 1;
-    transform: scale(1.05);
+    transform: scale(1.15);
 }
 
 .contenido {
@@ -267,7 +263,6 @@ header nav ul li a:hover {
     align-items: stretch;
     gap: 0.5rem;
     margin-bottom: 2rem;
-    
 }
 
 .contenido .venta{
@@ -281,40 +276,32 @@ header nav ul li a:hover {
 }
 
 .contenido .ver{
-    align-self: flex-end;
+    display: block;
+    width: fit-content;
+    margin: 1rem auto 0 auto;
     text-align: center;
     font-size: 1.5rem;
     border-radius: 7px;
-    background-color: #14406E;
+    background-color: #0B1E33;
     color: #ffffff;
-    padding: 0.25rem 0.75rem;
-    margin: 0;
+    padding: 0.25rem 3.5rem;
 }
 
 @media (min-width: 720px) {
     .contenido .catalogo-header {
-        flex-direction: row;
         justify-content: center;
         align-items: center;
-        position: relative;
         gap: 1rem;
     }
     .contenido .venta{
-        width: 60%;
-        margin: 0 auto;
+        width: 100%;
         padding: 0.5rem 1rem;
-    }
-    .contenido .ver{
-        position: absolute;
-        right: 0;
-        top: 50%;
     }
 }
 
 @media (min-width: 1025px){
     .contenido .venta{
-        width: 50%;
-        margin: 0 auto;
+        width: 100%;
         padding: 0.5rem 1rem;
     }
 }
@@ -358,7 +345,11 @@ header nav ul li a:hover {
     overflow: hidden;
 }
 
-
+.Targeta-header-label {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
 
 .grid {
     display: flex;
