@@ -20,8 +20,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const servicio = title.closest('.servicio');
             const serviceBody = servicio.querySelector('.service-body');
             const moreButton = title.querySelector('.more-button');
+            const serviceTitle = title;
             serviceBody.classList.toggle('hidden');
             servicio.classList.toggle('active');
+            serviceTitle.classList.toggle('active');
+            
             if (moreButton) {
                 moreButton.classList.toggle('minimize');
             }
