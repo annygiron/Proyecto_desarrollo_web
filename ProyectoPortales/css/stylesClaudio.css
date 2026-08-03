@@ -206,6 +206,39 @@ header nav ul a:hover {
     transition: background-color 1.5s ease;
 
 }
+
+.services .servicio .service-price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+    background-color: #1B4F82;
+}
+
+.services .servicio .service-price p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.25rem 0.75rem;
+    margin: 0;
+    text-align: center;
+}
+
+.services .servicio .service-price p span {
+    display: block;
+    margin-top: 5px;
+    text-align: center;
+    color: #c29f47;
+    font-size: 30px;
+}
+
+
 .services .servicio .service-title h2 {
     color: #000;
 }
