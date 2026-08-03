@@ -109,7 +109,8 @@ header nav ul li a:hover {
     width: 100%;
     height: 100%;
     object-fit: cover; 
-    object-position: bottom center;
+    object-position:  center;
+    opacity: 70%;
 }
 
 .hero-panel .hero-call-to-action{
@@ -130,6 +131,7 @@ header nav ul li a:hover {
 .hero-panel .hero-call-to-action h2 {
     font-size: 2rem;
     margin: 0;
+    color: #000;
 }
 
 .hero-panel .hero-call-to-action .btn-cta{
@@ -179,12 +181,73 @@ header nav ul li a:hover {
     display: flex;
     flex-direction: row;
     transition: transform 1s ease;
-    overflow-x:scroll ;
 }
 
-.carusel .carusel-trail>section{ 
+.carusel .carusel-trail> section{ 
     flex-shrink: 0;
+    width: 100vw;
 }
+
+.carusel .carusel-btn {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding:1rem;
+    background-color: transparent ;
+    color: #14406E;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    font-size: 4rem;
+    font-weight: bolder;
+}
+.carusel .carusel-btn.carusel-btn-left {
+    left:0px;
+}
+.carusel .carusel-btn.carusel-btn-right {
+    right:0px;
+}
+
+.carusel .carusel-indexed-btns {
+    position: absolute;
+    display: flex;
+    bottom: 0px;
+    left:50%;
+    transform: translateX(-50%);
+    gap:0.7rem;
+    padding:1rem;
+}
+.carusel .carusel-indexed-btns div {
+    background-color: #fff;
+    border:1px solid #333;
+    width:13px;
+    height: 13px;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+}
+
+.carusel .carusel-indexed-btns div.current{
+    background-color: #14406E;
+    border-radius: 7px;
+    width: 52px;
+    animation: caruselIdxPulse 1.5s infinite;
+}
+
+@keyframes caruselIdxPulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 #14406EB3;
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 10px 5px #14406E00;
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 #14406E00;
+    }
+}
+
 
 .trust-bar {
     display: flex;
