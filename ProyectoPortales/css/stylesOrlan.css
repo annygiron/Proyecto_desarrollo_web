@@ -297,3 +297,54 @@ footer .footer_derechos {
     height: 100%;
     z-index: 1;
 }
+
+/*--------------------------------------------------------------*/
+/*Estilos para el layout de la sección de contacto*/
+.contact-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 90%;
+    max-width: 1100px;
+    margin: 2rem auto;
+}
+
+.contact-layout_left,
+.contact-layout_right {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-layout .contact-section,
+.contact-layout .info-section {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+}
+
+.contact-layout .map-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-layout .map_wrapper {
+    flex: 1;
+    min-height: 300px;
+}
+
+@media (min-width: 900px) {
+    .contact-layout {
+        flex-direction: row;
+        align-items: stretch;
+    }
+
+    .contact-layout_left {
+        width: 45%;
+    }
+
+    .contact-layout_right {
+        width: 55%;
+    }
+}
