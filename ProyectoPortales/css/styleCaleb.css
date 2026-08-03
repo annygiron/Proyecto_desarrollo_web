@@ -186,6 +186,76 @@ header nav ul li a:hover {
     flex-shrink: 0;
 }
 
+.carusel .carusel-btn {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding:1rem;
+    background-color: #fff;
+    color: #333;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    font-weight: bolder;
+}
+.carusel .carusel-btn.carusel-btn-left {
+    left:0px;
+}
+.carusel .carusel-btn.carusel-btn-right {
+    right:0px;
+}
+
+.carusel .carusel-indexed-btns {
+    position: absolute;
+    display: flex;
+    bottom: 0px;
+    left:50%;
+    transform: translateX(-50%);
+    gap:0.7rem;
+    padding:1rem;
+}
+.carusel .carusel-indexed-btns div {
+    background-color: #fff;
+    border:1px solid #333;
+    width:13px;
+    height: 13px;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+}
+
+.carusel .carusel-indexed-btns div.current{
+    background-color: #444;
+    border-radius: 7px;
+    width: 52px;
+    animation: caruselIdxJump 0.7s ease;
+}
+
+@keyframes caruselIdxJump {
+    0% {
+        transform: translateY(0%);
+    }
+
+    20% {
+        transform: translateY(-150%);
+    }
+    40% {
+        transform: translateY(0%);
+    }
+    60% {
+        transform: translateY(-70%);
+    }
+    80% {
+        transform: translateY(0%);
+    }
+    90% {
+        transform: translateY(-20%);
+    }
+    100% {
+        transform: translateY(0%);;
+    }
+}
+
 .trust-bar {
     display: flex;
     justify-content: center;
