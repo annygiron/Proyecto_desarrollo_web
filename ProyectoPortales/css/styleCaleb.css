@@ -179,11 +179,11 @@ header nav ul li a:hover {
     display: flex;
     flex-direction: row;
     transition: transform 1s ease;
-    overflow-x:scroll ;
 }
 
-.carusel .carusel-trail>section{ 
+.carusel .carusel-trail> section{ 
     flex-shrink: 0;
+    width: 100vw;
 }
 
 .carusel .carusel-btn {
