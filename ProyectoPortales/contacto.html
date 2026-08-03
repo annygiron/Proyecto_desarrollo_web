@@ -29,61 +29,68 @@
             </nav>
         </header>
         <main>
-            <section class="contact-section">
-                <h2 class="contact_title">Contáctanos</h2>
-                <form class="contact_form" action="#" method="POST">
-                    <div class="contact_field">
-                        <label for="nombre">Nombre</label>
-                        <input type="text" id="nombre" name="nombre" required>
-                    </div>
+            <div class="contact-layout">
+                <div class="contact-layout_left">
+                    <section class="contact-section">
+                        <h2 class="contact_title">Contáctanos</h2>
+                        <form class="contact_form" action="#" method="POST">
+                            <div class="contact_field">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" id="nombre" name="nombre" required>
+                            </div>
 
-                    <div class="contact_field">
-                        <label for="correo">Correo electrónico</label>
-                        <input type="email" id="correo" name="correo" required>
-                    </div>
+                            <div class="contact_field">
+                                <label for="correo">Correo electrónico</label>
+                                <input type="email" id="correo" name="correo" required>
+                            </div>
 
-                    <div class="contact_field">
-                        <label for="telefono">Teléfono</label>
-                        <input type="tel" id="telefono" name="telefono">
-                    </div>
+                            <div class="contact_field">
+                                <label for="telefono">Teléfono</label>
+                                <input type="tel" id="telefono" name="telefono">
+                            </div>
 
-                    <div class="contact_field">
-                        <label for="mensaje">Mensaje</label>
-                        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-                    </div>
+                            <div class="contact_field">
+                                <label for="mensaje">Mensaje</label>
+                                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                            </div>
 
-                    <button type="submit" class="contact_submit">Enviar mensaje</button>
-                </form>
-            </section>
-            <section class="info-section">
-                <h2 class="info_title">Teléfono / WhatsApp</h2>
-                <div class="info_block">
-                    <p>9651-2489</p>
+                            <button type="submit" class="contact_submit">Enviar mensaje</button>
+                        </form>
+                    </section>
+                    <section class="info-section">
+                        <h2 class="info_title">Teléfono / WhatsApp</h2>
+                        <div class="info_block">
+                            <p>9651-2489</p>
+                        </div>
+
+                        <div class="info_block">
+                            <span class="info_label">Horarios de atención:</span>
+                            <p>Lunes a viernes: 7:00 am - 5:00 pm<br>
+                                Sábados: 7:00 am - 3:00 pm</p>
+                        </div>
+
+                        <div class="info_block">
+                            <span class="info_label">Dirección:</span>
+                            <p>Col. Gilberto Rodríguez, Una Cuadra de Cuerpo de Bomberos<br>
+                                Talanga, Francisco Morazán, Honduras C.A.</p>
+                        </div>
+                    </section>
                 </div>
 
-                <div class="info_block">
-                    <span class="info_label">Horarios de atención:</span>
-                    <p>Lunes a viernes: 7:00 am - 5:00 pm<br>
-                        Sábados: 7:00 am - 3:00 pm</p>
+                <div class="contact-layout_right">
+                    <section class="info-section map-section">
+                        <h2 class="info_title">Ubicación</h2>
+                        <div class="map_wrapper">
+                            <iframe
+                                src="https://www.google.com/maps?q=Venta+de+Baterias+Matute,+Col.+Gilberto+Rodr%C3%ADguez,+Talanga,+Francisco+Moraz%C3%A1n&output=embed"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                            </iframe>
+                            <a class="map_link" href="https://maps.app.goo.gl/zNpZSftrjqBVHCiJ6" target="_blank"
+                                aria-label="Abrir ubicación en Google Maps"></a>
+                        </div>
+                    </section>
                 </div>
-
-                <div class="info_block">
-                    <span class="info_label">Dirección:</span>
-                    <p>Col. Gilberto Rodríguez, Una Cuadra de Cuerpo de Bomberos<br>
-                        Talanga, Francisco Morazán, Honduras C.A.</p>
-                </div>
-            </section>
-            <section class="info-section map-section">
-                <h2 class="info_title">Ubicación</h2>
-                <div class="map_wrapper">
-                    <iframe
-                        src="https://www.google.com/maps?q=Venta+de+Baterias+Matute,+Col.+Gilberto+Rodr%C3%ADguez,+Talanga,+Francisco+Moraz%C3%A1n&output=embed"
-                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
-                    </iframe>
-                    <a class="map_link" href="https://maps.app.goo.gl/zNpZSftrjqBVHCiJ6" target="_blank"
-                        aria-label="Abrir ubicación en Google Maps"></a>
-                </div>
-            </section>
+        </div>
         </main>
         <footer>
             <div class="grid">
