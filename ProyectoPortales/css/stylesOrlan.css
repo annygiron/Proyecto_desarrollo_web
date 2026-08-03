@@ -165,3 +165,73 @@ footer .footer_derechos {
     text-align: center;
     margin-top: 1rem;
 }
+/*----------------------------------------------------------------*/
+/*Formulario de contacto*/
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #14406E;
+    border-radius: 7px;
+    box-shadow: 3px 3px 7px #000;
+    color: #fff;
+}
+
+.contact_title {
+    color: #af8b2e;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.contact_form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+}
+
+.contact_field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.contact_field label {
+    color: #af8b2e;
+    font-size: 0.95rem;
+}
+
+.contact_field input,
+.contact_field textarea {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.contact_field textarea {
+    resize: vertical;
+}
+
+.contact_submit {
+    align-self: center;
+    margin-top: 0.5rem;
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    box-shadow: 3px 3px 5px #000;
+    background-color: #0B1E33;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact_submit:hover {
+    background-color: #14406E;
+}
