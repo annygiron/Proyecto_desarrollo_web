@@ -338,7 +338,7 @@ header nav ul a:hover {
 
 }
 
-.LTH, .AMERICA, .CRONOS, .ACDELCO {
+.LTH, .AMERICA, .CRONOS, .ACDELCO, .INTERSTATE {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
