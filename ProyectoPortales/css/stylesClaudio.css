@@ -225,7 +225,7 @@ header nav ul a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0.25rem 0.75rem;
+    padding: 0;
     margin: 0;
     text-align: center;
 }
@@ -235,7 +235,6 @@ header nav ul a:hover {
     margin-top: 5px;
     text-align: center;
     color: #c29f47;
-    font-size: 30px;
 }
 
 
