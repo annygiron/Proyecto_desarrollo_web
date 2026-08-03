@@ -28,6 +28,34 @@
                 </ul>
             </nav>
         </header>
+        <main>
+            <section class="contact-section">
+                <h2 class="contact_title">Contáctanos</h2>
+                <form class="contact_form" action="#" method="POST">
+                    <div class="contact_field">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+
+                    <div class="contact_field">
+                        <label for="correo">Correo electrónico</label>
+                        <input type="email" id="correo" name="correo" required>
+                    </div>
+
+                    <div class="contact_field">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono">
+                    </div>
+
+                    <div class="contact_field">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit" class="contact_submit">Enviar mensaje</button>
+                </form>
+            </section>
+        </main>
         <footer>
             <div class="grid">
                 <div class="row">
