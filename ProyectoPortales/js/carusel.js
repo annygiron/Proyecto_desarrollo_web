@@ -25,6 +25,7 @@ class Carusel {
         if (this.slidesCount < 3) {
             throw new Error("Mínimo son 3 elementos en carusel");
         }
+        this.generateClonesUX();
         this.generateLateralsUX();
         this.generateIndexedUX();
         this.intervalTime = tickSecond * 1000;
@@ -58,14 +59,22 @@ class Carusel {
     }
 
     updateCurrentIndexedBtn() {
-        this.indexedButtonsItems.forEach(
-            (o) => {
-                o.classList.remove("current");
-            }
-        );
-        this.indexedButtonsItems[this.currentIndex].classList.add("current");
-    }
+        this.indexedButtonsItems.forEach((o) => {
+            o.classList.remove("current");
+        });
+        let activeIndex = this.currentIndex - 1;
 
+        if (activeIndex >= this.slidesCount) {
+            activeIndex = 0;
+        }
+        if (activeIndex < 0) {
+            activeIndex = this.slidesCount - 1;
+        }
+
+        if (this.indexedButtonsItems[activeIndex]) {
+            this.indexedButtonsItems[activeIndex].classList.add("current");
+        }
+    }
     generateLateralsUX() {
         this.btnLeft = document.createElement("DIV");
         this.btnRight = document.createElement("DIV");
@@ -84,7 +93,7 @@ class Carusel {
         this.btnLeft.addEventListener("click", (e) => {
             e.preventDefault();
             e.stopPropagation();
-            if (this.onProcess || this.currentIndex <= 0) {
+            if (this.onProcess) {
                 return;
             }
             this.onProcess = true;
@@ -96,7 +105,7 @@ class Carusel {
         this.btnRight.addEventListener("click", (e) => {
             e.preventDefault();
             e.stopPropagation();
-            if (this.onProcess || this.currentIndex >= this.slidesCount) {
+            if (this.onProcess) {
                 return;
             }
             this.onProcess = true;
@@ -126,16 +135,39 @@ class Carusel {
     }
 
     moveSlide() {
-        if (this.currentIndex >= this.slidesCount) {
-            this.direction = -1; 
-            this.currentIndex = this.slidesCount - 2;
-        } else if (this.currentIndex < 0) {
-            this.direction = 1;
-            this.currentIndex = 1;
-        }
-        this.trail.style.transform = `translateX(${(100 * this.currentIndex * -1)}vw)`;
+        this.trail.style.transition = "transform 1s ease";
+        this.trail.style.transform = `translateX(-${this.currentIndex * 100}%)`;
+
         this.updateCurrentIndexedBtn();
-        this.onProcess = false;
+
+        setTimeout(() => {
+            this.onProcess = false;
+        }, 1000);
+
         this.tick();
+    }
+
+    generateClonesUX() {
+        let firstClone = this.slides[0].cloneNode(true);
+        let lastClone = this.slides[this.slidesCount - 1].cloneNode(true);
+
+        this.trail.appendChild(firstClone);
+        this.trail.insertBefore(lastClone, this.slides[0]);
+
+        this.trail.style.transition = "none";
+        this.trail.style.transform = `translateX(-100%)`;
+
+        this.trail.addEventListener("transitionend", () => {
+            if (this.currentIndex >= this.slidesCount + 1) {
+                this.trail.style.transition = "none";
+                this.currentIndex = 1;
+                this.trail.style.transform = `translateX(-100%)`;
+            }
+            if (this.currentIndex <= 0) {
+                this.trail.style.transition = "none";
+                this.currentIndex = this.slidesCount;
+                this.trail.style.transform = `translateX(-${this.slidesCount * 100}%)`;
+            }
+        });
     }
 }
