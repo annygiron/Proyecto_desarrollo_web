@@ -254,6 +254,10 @@ header nav ul li a:hover {
     }
 }
 
+.hidden {
+    display:none;
+}
+
 header .hmb-button {
     position:absolute;
     top: 1rem;
@@ -282,9 +286,7 @@ header .hmb-button div {
     }
 }
 
-.hidden {
-    display:none;
-}
+
 
 .trust-bar {
     display: flex;
