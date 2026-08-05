@@ -87,7 +87,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover { 
-    background-color: #444;
+    background-color: #14406E;
 }
 
 
@@ -131,11 +131,11 @@ header nav ul li a:hover {
 .hero-panel .hero-call-to-action h2 {
     font-size: 2rem;
     margin: 0;
-    color: #000;
+    color: #0B1E33;
 }
 
 .hero-panel .hero-call-to-action .btn-cta{
-    background-color: #1D5C8C;
+    background-color: #0B1E33;
     color: #fff;
     text-decoration: none;
     padding: 0.75rem 1.2rem;
@@ -155,11 +155,16 @@ header nav ul li a:hover {
     header {
         flex-direction: row;
         align-items: center;
+        justify-content: flex-start;
+        gap: 3rem;
     }
     header .brand-section{
-        width: 280px;
+        width: auto;
         flex-direction: row;
         justify-content: start;
+    }
+    header .brand-section h1 {
+        white-space: nowrap;
     }
     .hero-panel .hero-call-to-action {
         width: 700px;
@@ -167,7 +172,6 @@ header nav ul li a:hover {
     .hero-panel .hero-call-to-action h2 {
         font-size: 3rem;
     }
-    
 }
 
 .carusel{
@@ -374,11 +378,13 @@ header .hmb-button div {
     width: fit-content;
     margin: 1rem auto 0 auto;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1rem;
     border-radius: 7px;
     background-color: #0B1E33;
     color: #ffffff;
-    padding: 0.25rem 3.5rem;
+    padding: 0.25rem 3rem;
+    box-shadow: 3px 3px 5px #000;
+
 }
 
 @media (min-width: 720px) {
@@ -411,12 +417,16 @@ header .hmb-button div {
     align-items: center;
     text-align: center;
     padding: 0.75rem;
-    color: #ffffff;
+    color: #14406E;
     font-size: 1.2rem;
-    background-color: #14406E;
+    background-color: #fff;
     border-radius: 7px;
     overflow: hidden;
     box-shadow: 3px 3px 7px #0B1E33;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .Targetas_cuadricula .row > div {
@@ -424,7 +434,17 @@ header .hmb-button div {
     margin-bottom: 1rem;
 }
 
-.Targeta{
+.contenido .Targetas_cuadricula .Targetanosotros{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0.75rem;
+    color: #fff;
+    font-size: 1.2rem;
+    background-color: #14406E;
+    border-radius: 7px;
+    overflow: hidden;
+    box-shadow: 3px 3px 7px #0B1E33;
     height: 100%;
     width: 100%;
     display: flex;
@@ -432,17 +452,25 @@ header .hmb-button div {
 }
 
 
+
 .Targeta-header img {
-    width: 300px;
+    width: 100%;
+    max-width: 100%;
     height: 200px;
     display: block;
     overflow: hidden;
+    object-fit: contain;
+    background-color: #ffffff;
 }
 
 .Targeta-header-label {
     font-size: 1.25rem;
     font-weight: bold;
     margin-top: 0.5rem;
+}
+
+.Targeta-footer-price{
+    color: #927428;
 }
 
 .grid {
