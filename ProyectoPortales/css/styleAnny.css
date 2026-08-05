@@ -21,39 +21,74 @@ main {
 
 header {
     display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    background-color: #0B1E33;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem 1.5rem;
+    background-color: #0B1E33;
     color: #fff;
+    padding: 0.75rem 1.5rem;
+    position: relative;
+}
+
+header .hmb-button {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+    cursor: pointer;
+}
+
+header .hmb-button div {
+    width: 2rem;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 3px;
+}
+
+@media (min-width: 720px) {
+    header .hmb-button {
+        display: none;
+    }
+
+    header nav.hidden {
+        display: block;
+    }
 }
 
 header .brand-section {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
+    gap: 1rem;
 }
 
 header .brand-section img {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
 }
 
 header .brand-section h1 {
-    font-size: 2rem;
+    font-size: 1.9rem;
     margin: 0;
-    text-align: center;
+    text-align: left;
+    line-height: 1.2;
 }
 
 header nav ul {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
     list-style: none;
     padding: 0px;
     margin: 0px;
+    gap: 0.25rem 0.5rem;
 }
 
 header nav ul a {
@@ -61,8 +96,9 @@ header nav ul a {
     text-decoration: none;
     color: #fff;
     padding: 0.5rem 0.75rem;
-    min-width: 120px;
     text-align: center;
+    white-space: nowrap;
+    border-radius: 4px;
     transition: background-color 0.3s ease;
 }
 
@@ -70,22 +106,19 @@ header nav ul a:hover {
     background-color: #1B4F82;
 }
 
-@media (min-width: 720px) {
-    header nav ul {
-        flex-direction: row;
-    }
-}
-
-@media (min-width: 1024px) {
+@media (max-width: 719px) {
     header {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 0.5rem 1rem;
+        flex-direction: column;
+        text-align: center;
     }
 
     header .brand-section {
-        flex-direction: row;
-        gap: 1rem;
+        flex-direction: column;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -193,7 +226,6 @@ main {
   opacity: 0.85;
 }
 
-/* ===== Página Carga y Diagnóstico ===== */
 .bloque-servicio {
   margin-bottom: 30px;
 }
@@ -252,7 +284,7 @@ main {
   border-top: 1px solid #14406E;
 }
 
-/* ===== Footer ===== */
+/*Footer*/
 footer {
   background-color: #0B1E33;
   color: #ffffff;
@@ -303,7 +335,7 @@ footer p {
     margin-top: 1rem;
 }
 
-/* ===== Grid (solo lo que usa el footer: col-12, col-m-6, col-l-3) ===== */
+
 .grid {
     display: flex;
     flex-direction: column;
