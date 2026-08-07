@@ -1541,4 +1541,208 @@ main .intro {
         width: 30%;
     }
 }
- 
+
+/*----------------------------------------------------------------*/
+/*Formulario de contacto*/
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #14406E;
+    border-radius: 7px;
+    box-shadow: 3px 3px 7px #000;
+    color: #fff;
+}
+
+.contact_title {
+    color: #af8b2e;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.contact_form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+}
+
+.contact_field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.contact_field label {
+    color: #af8b2e;
+    font-size: 0.95rem;
+}
+
+.contact_field input,
+.contact_field textarea {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.contact_field textarea {
+    resize: vertical;
+}
+
+.contact_field.error input,
+.contact_field.error textarea {
+    outline: 2px solid #d9534f;
+}
+
+.contact_error {
+    color: #ff8a80;
+    font-size: 0.85rem;
+}
+
+.contact_submit {
+    align-self: center;
+    margin-top: 0.5rem;
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    box-shadow: 3px 3px 5px #000;
+    background-color: #0B1E33;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact_submit:hover {
+    background-color: #14406E;
+}
+
+/*--------------------------------------------------------------*/
+/*Datos de contacto y direccion*/
+.info-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    max-width: 500px;
+    margin: 0 auto 2rem auto;
+    padding: 1.5rem;
+    background-color: #14406E;
+    border-radius: 7px;
+    box-shadow: 3px 3px 7px #000;
+    color: #fff;
+}
+
+.info_title {
+    color: #af8b2e;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.info_block {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.info_block:last-child {
+    margin-bottom: 0;
+}
+
+.info_label {
+    display: block;
+    color: #af8b2e;
+    font-size: 0.95rem;
+    margin-bottom: 0.25rem;
+}
+
+/*--------------------------------------------------------------*/
+/*Estilos para el mapa de Google Maps*/
+.map-section {
+    overflow: hidden;
+}
+
+.map_wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+.map_link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/*--------------------------------------------------------------*/
+/*Estilos para el layout de la sección de contacto*/
+.contact-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 90%;
+    max-width: 1100px;
+    margin: 2rem auto;
+}
+
+.contact-layout_left,
+.contact-layout_right {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-layout .contact-section,
+.contact-layout .info-section {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+}
+
+.contact-layout .map-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-layout .map_wrapper {
+    flex: 1;
+    min-height: 300px;
+}
+
+@media (min-width: 900px) {
+    .contact-layout {
+        flex-direction: row;
+        align-items: stretch;
+    }
+
+    .contact-layout_left {
+        width: 45%;
+    }
+
+    .contact-layout_right {
+        width: 55%;
+    }
+}
+
+/*--------------------------------------------------------------*/
+/*Estilos para el enlace de WhatsApp*/
+.whatsapp_link {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.whatsapp_link:hover {
+    color: #af8b2e;
+}
