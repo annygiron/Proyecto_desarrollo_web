@@ -468,3 +468,7 @@ footer .footer_derechos {
     padding: 1rem;
     font-size: 0.9rem;
 }
+
+.hidden {
+    display: none !important;
+}
