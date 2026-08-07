@@ -882,3 +882,208 @@ body.pagina-preguntas main {
   font-size: 0.95rem;
   border-top: 1px solid #14406E;
 }
+
+.services {
+    width: 90%;
+    max-width: 1400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem auto;
+    gap: 0.5rem;
+}
+.title {
+    display: flex;
+    flex-direction: column;
+    padding: 0.25rem 0.75rem;
+    text-align: center;
+}
+
+.services span {
+    display: flex;
+    color: #927428;
+
+}
+
+.services .servicio {
+
+    width: 100%;
+}
+.services .servicio .service-title {
+      cursor: pointer;
+    position: relative;
+    /*background-color: #1B4F82;*/
+    border-radius: 4px;
+    padding: 0.25rem 0.75rem;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    width: 1400px;
+    height: 60px;
+    border: 1px solid #000 ;
+    transition: background-color 1.5s ease;
+
+}
+
+.services .servicio .service-price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+    background-color: #1B4F82;
+}
+
+.services .servicio .service-price p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.services .servicio .service-price p span {
+    display: block;
+    margin-top: 5px;
+    text-align: center;
+    color: #c29f47;
+}
+
+
+.services .servicio .service-title h2 {
+    color: #000;
+}
+
+.services .servicio .service-title.active h2 {
+    color: #fff;
+}
+
+.services  .service-title .more-button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+
+}
+.services .service-title .more-button div {
+    width: 1.5rem;
+    height:3.5px;
+    background-color: #927428;
+    border-radius: 3px;
+}
+
+
+.services .service-title .more-button div.side1{
+    transform: rotate(90deg)  ;
+}
+
+.services .service-title .more-button div.side2{
+    transform: rotate(180deg) translateY(11.5px);
+}
+
+.services .service-title .more-button.minimize .side1 {
+    transform: rotate(0deg);
+}
+
+.services .service-title .more-button.minimize .side2 {
+    transform: rotate(0deg) translateY(-10);
+}
+
+
+.services .servicio .service-title:hover  {
+    background-color: #1B4F82;
+}
+
+.services .servicio .service-title:hover h2 {
+    color: #fff;
+}
+
+.services .servicio .service-title.active {
+    background-color: #1B4F82;
+}
+
+.services .service-title h2 {
+
+    color: #fff;
+    margin: 5px;
+    text-align: center;
+
+} 
+
+.services  .hidden {
+    display: none;
+
+}
+
+.services .service-body.hidden {
+    display: none;
+}
+
+@media (min-width: 720px) {
+
+    .services {
+        width: 90%;
+    }
+
+    .services .servicio .service-title {
+        width: 100%;
+    }
+
+    .services .service-title .more-button {
+        width: 60px;
+        right: 0;
+    }
+
+    .services .service-title h2 {
+        font-size: 1.5rem;
+    }
+
+}
+
+@media (min-width: 320px) {
+
+    .services {
+        width: 95%;
+        margin: 1rem auto;
+    }
+
+    .services .servicio {
+        width: 100%;
+    }
+
+    .services .servicio .service-title {
+        width: 100%;
+        height: 55px;
+        padding: 0.25rem 3.5rem 0.25rem 0.5rem;
+    }
+
+    .services .service-title h2 {
+        font-size: 1rem;
+        margin: 5px;
+    }
+
+    .services .service-title .more-button {
+        top: 0;
+        right: 0;
+        width: 50px;
+        height: 55px;
+    }
+
+    .services .service-title .more-button div {
+        width: 1.2rem;
+        height: 3px;
+    }
+
+}
