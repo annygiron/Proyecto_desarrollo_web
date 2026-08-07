@@ -721,4 +721,171 @@ footer p {
 }
 
 
+/* ==========================================================
+   Página: Preguntas Frecuentes (Anny)
+   Todo escopado a body.pagina-preguntas para no afectar
+   el resto de páginas del sitio.
+   ========================================================== */
 
+body.pagina-preguntas {
+    background-color: #f4f6f8;
+    color: #1a1a1a;
+}
+
+body.pagina-preguntas main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 45px 20px 70px;
+}
+
+.categoria {
+  margin-bottom: 38px;
+}
+
+.categoria > h3 {
+  color: #14406E;
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 3px solid #F2A93B;
+  display: inline-block;
+}
+
+.servicio {
+  background-color: #1B4F82;
+  color: #ffffff;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.service-title {
+  width: 100%;
+  color: #ffffff;
+  padding: 18px 22px;
+  font-size: 1.05rem;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.service-title.active {
+  background-color: #1D5C8C;
+}
+
+.more-button {
+  background: none;
+  border: none;
+  color: #F2A93B;
+  font-weight: bold;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.more-button.minimize {
+  transform: rotate(45deg);
+}
+
+.service-body {
+  background-color: #0D2B4E;
+  padding: 16px 22px 20px;
+}
+
+.service-body p {
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: #e6edf3;
+}
+
+.cta-final {
+  text-align: center;
+  margin-top: 50px;
+  padding: 30px;
+  background-color: #0B1E33;
+  border-radius: 8px;
+  color: #ffffff;
+}
+
+.cta-final p {
+  margin-bottom: 16px;
+  font-size: 1.05rem;
+}
+
+.cta-final a.boton {
+  display: inline-block;
+  background-color: #F2A93B;
+  color: #0B1E33;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 12px 28px;
+  border-radius: 4px;
+  transition: opacity 0.2s ease;
+}
+
+.cta-final a.boton:hover {
+  opacity: 0.85;
+}
+
+.bloque-servicio {
+  margin-bottom: 30px;
+}
+
+.bloque-servicio h3 {
+  color: #14406E;
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 3px solid #F2A93B;
+  display: inline-block;
+}
+
+.texto-servicio {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #1a1a1a;
+  margin-bottom: 14px;
+}
+
+.subtitulo-servicio {
+  color: #0D2B4E;
+  font-size: 1.05rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.lista-servicio {
+  padding-left: 22px;
+  line-height: 1.7;
+  color: #1a1a1a;
+}
+
+.tabla-servicio {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.tabla-servicio th {
+  background-color: #0B1E33;
+  color: #ffffff;
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.tabla-servicio td {
+  background-color: #1B4F82;
+  color: #ffffff;
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  border-top: 1px solid #14406E;
+}
