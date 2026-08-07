@@ -720,13 +720,6 @@ footer p {
 .grid .row .offset-l-12 {margin-left: 100%;}
 }
 
-
-/* ==========================================================
-   Página: Preguntas Frecuentes (Anny)
-   Todo escopado a body.pagina-preguntas para no afectar
-   el resto de páginas del sitio.
-   ========================================================== */
-
 body.pagina-preguntas {
     background-color: #f4f6f8;
     color: #1a1a1a;
