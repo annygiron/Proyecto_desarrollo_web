@@ -359,3 +359,112 @@ footer .footer_derechos {
 .whatsapp_link:hover {
     color: #af8b2e;
 }
+
+/*--------------------------------------------------------------*/
+/*Buzón de mensajes flotante*/
+#buzonBtn {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: none;
+    background-color: #0B1E33;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 3px 3px 7px #000;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#buzonBtn:hover {
+    background-color: #14406E;
+}
+
+#buzonBadge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    background-color: #d9534f;
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 0.15rem 0.4rem;
+    border-radius: 50%;
+    min-width: 18px;
+}
+
+#buzonPanel {
+    position: fixed;
+    bottom: 5.5rem;
+    right: 1.5rem;
+    width: 320px;
+    max-height: 420px;
+    background-color: #14406E;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px #000;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+}
+
+#buzonPanelHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    background-color: #0B1E33;
+}
+
+#buzonPanelHeader h3 {
+    margin: 0;
+    color: #af8b2e;
+    font-size: 1.1rem;
+}
+
+#buzonCerrar {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#buzonLista {
+    overflow-y: auto;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.buzonMsg {
+    background-color: #fff;
+    color: #0B1E33;
+    border-radius: 7px;
+    padding: 0.6rem 0.75rem;
+    font-size: 0.9rem;
+}
+
+.buzonMsg strong {
+    color: #14406E;
+}
+
+.buzonMsg-fecha {
+    display: block;
+    margin-top: 0.35rem;
+    font-size: 0.75rem;
+    color: #927428;
+}
+
+.buzonVacio {
+    text-align: center;
+    color: #fff;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
