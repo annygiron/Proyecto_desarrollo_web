@@ -910,7 +910,8 @@ body.pagina-preguntas main {
     width: 100%;
 }
 .services .servicio .service-title {
-      cursor: pointer;
+    background-color: #fff;
+    cursor: pointer;
     position: relative;
     /*background-color: #1B4F82;*/
     border-radius: 4px;
