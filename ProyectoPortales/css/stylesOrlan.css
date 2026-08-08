@@ -398,6 +398,10 @@ footer .footer_derechos {
     min-width: 18px;
 }
 
+#buzonBadge.hidden {
+    display: none;
+}
+
 #buzonPanel {
     position: fixed;
     bottom: 5.5rem;
@@ -411,6 +415,10 @@ footer .footer_derechos {
     display: flex;
     flex-direction: column;
     z-index: 999;
+}
+
+#buzonPanel.hidden {
+    display: none;
 }
 
 #buzonPanelHeader {
@@ -470,5 +478,5 @@ footer .footer_derechos {
 }
 
 .hidden {
-    display: none !important;
+    display: none;
 }
