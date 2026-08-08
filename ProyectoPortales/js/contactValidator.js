@@ -9,9 +9,11 @@ document.addEventListener("DOMContentLoaded", () => {
     let fieldErrors = {};
 
     form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    validateFormulario();
-});
+        e.preventDefault();
+        if (validateFormulario()) {
+            form.dispatchEvent(new CustomEvent("formularioValido"));
+        }
+    });
 
     const showError = (field, message) => {
         const parent = field.parentElement;

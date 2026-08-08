@@ -32,8 +32,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const telefono = document.getElementById("telefono");
     const mensaje = document.getElementById("mensaje");
 
-    const isEmptyRegex = /^\s*$/;
-    const isValidEmailRegex = /^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/;
+    let ultimoLeido = Number(localStorage.getItem("buzonUltimoLeido") || 0);
+    let mensajesActuales = [];
 
     const buzonBtn = document.createElement("button");
     buzonBtn.id = "buzonBtn";
@@ -80,8 +80,12 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         }
 
-        if (mensajes.length > 0) {
-            buzonBadge.textContent = mensajes.length;
+        mensajesActuales = mensajes;
+
+        const noLeidos = mensajes.filter((m) => m.creado > ultimoLeido).length;
+
+        if (noLeidos > 0) {
+            buzonBadge.textContent = noLeidos;
             buzonBadge.classList.remove("hidden");
         } else {
             buzonBadge.classList.add("hidden");
@@ -98,20 +102,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     buzonBtn.addEventListener("click", () => {
         buzonPanel.classList.toggle("hidden");
+
+        if (!buzonPanel.classList.contains("hidden") && mensajesActuales.length > 0) {
+            ultimoLeido = Math.max(...mensajesActuales.map((m) => m.creado));
+            localStorage.setItem("buzonUltimoLeido", ultimoLeido);
+            buzonBadge.classList.add("hidden");
+        }
     });
 
     document.getElementById("buzonCerrar").addEventListener("click", () => {
         buzonPanel.classList.add("hidden");
     });
 
-    form.addEventListener("submit", async (event) => {
-    event.preventDefault();
-        const nombreValido = !isEmptyRegex.test(nombre.value);
-        const correoValido = isValidEmailRegex.test(correo.value);
-        const mensajeValido = !isEmptyRegex.test(mensaje.value);
-
-        if (!nombreValido || !correoValido || !mensajeValido) return;
-
+    form.addEventListener("formularioValido", async () => {
         try {
             await addDoc(mensajesRef, {
                 nombre: nombre.value.trim(),
@@ -125,5 +128,5 @@ document.addEventListener("DOMContentLoaded", () => {
         } catch (error) {
             console.error("Error guardando el mensaje:", error);
         }
-    }, true);
+    });
 });
