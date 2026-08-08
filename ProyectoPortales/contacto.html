@@ -132,6 +132,32 @@
             <p class="footer_derechos">© 2026 Baterías Matute. Todos los derechos reservados.</p>
         </footer>
         <script src="js/contactValidator.js"></script>
+                <script type="module">
+          import { initializeApp } from "https://www.gstatic.com/firebasejs/12.17.1/firebase-app.js";
+          import {
+            getFirestore,
+            collection,
+            addDoc,
+            onSnapshot,
+            query,
+            orderBy
+          } from "https://www.gstatic.com/firebasejs/12.17.1/firebase-firestore.js";
+
+          const firebaseConfig = {
+            apiKey: "AIzaSyBG7uDmLYfNliXs4qFe7zAIQ_UqYEWelrg",
+            authDomain: "bateriasmatute.firebaseapp.com",
+            projectId: "bateriasmatute",
+            storageBucket: "bateriasmatute.firebasestorage.app",
+            messagingSenderId: "916121024310",
+            appId: "1:916121024310:web:1126982bb12f1518a72597"
+          };
+
+          const app = initializeApp(firebaseConfig);
+          const db = getFirestore(app);
+
+          window.buzonDB = db;
+          window.buzonFirestore = { collection, addDoc, onSnapshot, query, orderBy };
+        </script>
         <script src="js/buzon.js"></script>
     </body>
 
