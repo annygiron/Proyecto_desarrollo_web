@@ -1,9 +1,31 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.17.1/firebase-app.js";
+import {
+    getFirestore,
+    collection,
+    addDoc,
+    onSnapshot,
+    query,
+    orderBy,
+    serverTimestamp,
+} from "https://www.gstatic.com/firebasejs/12.17.1/firebase-firestore.js";
+
+const firebaseConfig = {
+    apiKey: "AIzaSyBG7uDmLYfNliXs4qFe7zAIQ_UqYEWelrg",
+    authDomain: "bateriasmatute.firebaseapp.com",
+    projectId: "bateriasmatute",
+    storageBucket: "bateriasmatute.firebasestorage.app",
+    messagingSenderId: "916121024310",
+    appId: "1:916121024310:web:1126982bb12f1518a72597",
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app, "default");
+const reviewsCollection = collection(db, "reviews");
+
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("review-form");
     const grid = document.getElementById("review-grid");
     const mensaje = document.getElementById("form-mensaje");
-
-    const STORAGE_KEY = "matuteReviews";
 
     function crearTarjeta({ nombre, calificacion, comentario, fecha }) {
         const card = document.createElement("section");
@@ -23,22 +45,21 @@ document.addEventListener("DOMContentLoaded", () => {
         return card;
     }
 
-    function cargarReseñasGuardadas() {
-        const guardadas = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
-        guardadas.forEach((reseña) => {
-            grid.prepend(crearTarjeta(reseña));
-        });
-    }
+    const reviewsQuery = query(reviewsCollection, orderBy("creadoEn", "desc"));
+    onSnapshot(
+        reviewsQuery,
+        (snapshot) => {
+            grid.innerHTML = "";
+            snapshot.forEach((doc) => {
+                grid.appendChild(crearTarjeta(doc.data()));
+            });
+        },
+        (error) => {
+            alert("ERROR AL LEER RESEÑAS: " + error.message);
+        }
+    );
 
-    function guardarReseña(reseña) {
-        const guardadas = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
-        guardadas.push(reseña);
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(guardadas));
-    }
-
-    cargarReseñasGuardadas();
-
-    form.addEventListener("submit", (e) => {
+    form.addEventListener("submit", async (e) => {
         e.preventDefault();
 
         const nombre = document.getElementById("review-name").value.trim();
@@ -56,13 +77,18 @@ document.addEventListener("DOMContentLoaded", () => {
             calificacion: Number(estrellaSeleccionada.value),
             comentario,
             fecha: new Date().toLocaleDateString("es-HN"),
+            creadoEn: serverTimestamp(),
         };
 
-        grid.prepend(crearTarjeta(reseña));
-        guardarReseña(reseña);
-
-        form.reset();
-        mensaje.textContent = "¡Gracias por tu reseña!";
-        mensaje.style.color = "#1B4F82";
+        try {
+            await addDoc(reviewsCollection, reseña);
+            form.reset();
+            mensaje.textContent = "¡Gracias por tu reseña!";
+            mensaje.style.color = "#1B4F82";
+        } catch (error) {
+            alert("ERROR AL GUARDAR: " + error.message);
+            mensaje.textContent = "Hubo un problema al enviar tu reseña. Intenta de nuevo.";
+            mensaje.style.color = "#b00020";
+        }
     });
 });
