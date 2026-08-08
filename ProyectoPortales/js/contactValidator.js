@@ -9,12 +9,9 @@ document.addEventListener("DOMContentLoaded", () => {
     let fieldErrors = {};
 
     form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        if (validateFormulario()) {
-            form.submit();
-        }
-    });
+    e.preventDefault();
+    validateFormulario();
+});
 
     const showError = (field, message) => {
         const parent = field.parentElement;

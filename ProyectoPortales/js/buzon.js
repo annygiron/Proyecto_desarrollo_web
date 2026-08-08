@@ -11,12 +11,12 @@ import {
 } from "https://www.gstatic.com/firebasejs/12.17.1/firebase-firestore.js";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBG7uDmLYfNliXs4qFe7zAIQ_UqYEWelrg",
-    authDomain: "bateriasmatute.firebaseapp.com",
-    projectId: "bateriasmatute",
-    storageBucket: "bateriasmatute.firebasestorage.app",
-    messagingSenderId: "916121024310",
-    appId: "1:916121024310:web:1126982bb12f1518a72597"
+    apiKey: "AIzaSyDv4CIvUMlSNS7YcfbPtaPR_H7D-H7h9ow",
+    authDomain: "bateriasmatute-d7a0b.firebaseapp.com",
+    projectId: "bateriasmatute-d7a0b",
+    storageBucket: "bateriasmatute-d7a0b.firebasestorage.app",
+    messagingSenderId: "315889890596",
+    appId: "1:315889890596:web:3b2dd93b74b0fb6d5e6fb1"
 };
 
 const app = initializeApp(firebaseConfig);
@@ -104,7 +104,8 @@ document.addEventListener("DOMContentLoaded", () => {
         buzonPanel.classList.add("hidden");
     });
 
-    form.addEventListener("submit", async () => {
+    form.addEventListener("submit", async (event) => {
+    event.preventDefault();
         const nombreValido = !isEmptyRegex.test(nombre.value);
         const correoValido = isValidEmailRegex.test(correo.value);
         const mensajeValido = !isEmptyRegex.test(mensaje.value);
