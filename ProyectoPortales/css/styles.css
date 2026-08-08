@@ -1541,8 +1541,6 @@ main .intro {
     }
 }
 
-/*----------------------------------------------------------------*/
-/*Formulario de contacto*/
 .contact-section {
     display: flex;
     flex-direction: column;
@@ -1612,8 +1610,6 @@ main .intro {
     background-color: #14406E;
 }
 
-/*--------------------------------------------------------------*/
-/*Datos de contacto y direccion*/
 .info-section {
     display: flex;
     flex-direction: column;
@@ -1651,8 +1647,6 @@ main .intro {
     margin-bottom: 0.25rem;
 }
 
-/*--------------------------------------------------------------*/
-/*Estilos para el mapa de Google Maps*/
 .map-section {
     overflow: hidden;
 }
@@ -1674,8 +1668,6 @@ main .intro {
     z-index: 1;
 }
 
-/*--------------------------------------------------------------*/
-/*Estilos para el layout de la sección de contacto*/
 .contact-layout {
     display: flex;
     flex-direction: column;
@@ -1725,8 +1717,6 @@ main .intro {
     }
 }
 
-/*--------------------------------------------------------------*/
-/*Estilos para el enlace de WhatsApp*/
 .whatsapp_link {
     color: #fff;
     text-decoration: underline;
@@ -1736,8 +1726,6 @@ main .intro {
     color: #af8b2e;
 }
 
-/*--------------------------------------------------------------*/
-/*Buzón de mensajes flotante*/
 #buzonBtn {
     position: fixed;
     bottom: 1.5rem;
