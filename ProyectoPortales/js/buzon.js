@@ -1,18 +1,27 @@
-// buzon.js — Bandeja de mensajes de contacto (solo va en contacto.html)
+// buzon.js — Bandeja de mensajes de contacto (Firebase Firestore)
 
-const BUZON_STORAGE_KEY = "buzonMensajes";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.17.1/firebase-app.js";
+import {
+    getFirestore,
+    collection,
+    addDoc,
+    onSnapshot,
+    query,
+    orderBy
+} from "https://www.gstatic.com/firebasejs/12.17.1/firebase-firestore.js";
 
-const buzonGetMensajes = () => {
-    try {
-        return JSON.parse(localStorage.getItem(BUZON_STORAGE_KEY)) || [];
-    } catch {
-        return [];
-    }
+const firebaseConfig = {
+    apiKey: "AIzaSyBG7uDmLYfNliXs4qFe7zAIQ_UqYEWelrg",
+    authDomain: "bateriasmatute.firebaseapp.com",
+    projectId: "bateriasmatute",
+    storageBucket: "bateriasmatute.firebasestorage.app",
+    messagingSenderId: "916121024310",
+    appId: "1:916121024310:web:1126982bb12f1518a72597"
 };
 
-const buzonGuardarMensajes = (mensajes) => {
-    localStorage.setItem(BUZON_STORAGE_KEY, JSON.stringify(mensajes));
-};
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+const mensajesRef = collection(db, "mensajes");
 
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("contactForm");
@@ -26,7 +35,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const isEmptyRegex = /^\s*$/;
     const isValidEmailRegex = /^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/;
 
-    // --- Construcción del widget ---
     const buzonBtn = document.createElement("button");
     buzonBtn.id = "buzonBtn";
     buzonBtn.type = "button";
@@ -46,15 +54,13 @@ document.addEventListener("DOMContentLoaded", () => {
             <h3>Bandeja de entrada</h3>
             <button id="buzonCerrar" type="button" aria-label="Cerrar bandeja">✕</button>
         </div>
-        <div id="buzonLista"></div>
+        <div id="buzonLista"><p class="buzonVacio">Cargando mensajes...</p></div>
     `;
 
     document.body.appendChild(buzonBtn);
     document.body.appendChild(buzonPanel);
 
-    // --- Render de mensajes ---
-    const buzonRender = () => {
-        const mensajes = buzonGetMensajes();
+    const buzonRender = (mensajes) => {
         const lista = document.getElementById("buzonLista");
         lista.innerHTML = "";
 
@@ -82,7 +88,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    buzonRender();
+    const q = query(mensajesRef, orderBy("creado", "asc"));
+    onSnapshot(q, (snapshot) => {
+        const mensajes = snapshot.docs.map((doc) => doc.data());
+        buzonRender(mensajes);
+    });
 
     buzonBtn.addEventListener("click", () => {
         buzonPanel.classList.toggle("hidden");
@@ -92,24 +102,22 @@ document.addEventListener("DOMContentLoaded", () => {
         buzonPanel.classList.add("hidden");
     });
 
-    // --- Captura del mensaje al enviar el formulario ---
-    form.addEventListener("submit", () => {
+    form.addEventListener("submit", async () => {
         const nombreValido = !isEmptyRegex.test(nombre.value);
         const correoValido = isValidEmailRegex.test(correo.value);
         const mensajeValido = !isEmptyRegex.test(mensaje.value);
 
         if (!nombreValido || !correoValido || !mensajeValido) return;
 
-        const mensajes = buzonGetMensajes();
-        mensajes.push({
+        await addDoc(mensajesRef, {
             nombre: nombre.value.trim(),
             correo: correo.value.trim(),
             telefono: telefono.value.trim(),
             mensaje: mensaje.value.trim(),
-            fecha: new Date().toLocaleString("es-HN")
+            fecha: new Date().toLocaleString("es-HN"),
+            creado: Date.now()
         });
-        buzonGuardarMensajes(mensajes);
-        buzonRender();
+
         buzonPanel.classList.remove("hidden");
     }, true);
 });
