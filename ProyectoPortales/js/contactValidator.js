@@ -1,10 +1,12 @@
 const isEmptyRegex = /^\s*$/;
-const isValidEmailRegex = /^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/;
+const isValidEmailRegex = /^[\w.\-]+@(gmail|outlook|yahoo)\.com$/;
+const isValidPhoneRegex = /^[892]\d{7}$/;
 
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("contactForm");
     const nombre = document.getElementById("nombre");
     const correo = document.getElementById("correo");
+    const telefono = document.getElementById("telefono");
     const mensaje = document.getElementById("mensaje");
     let fieldErrors = {};
 
@@ -45,8 +47,8 @@ document.addEventListener("DOMContentLoaded", () => {
             if (!focused) { focused = true; nombre.focus(); }
         }
 
-        if (!isValidEmailRegex.test(correo.value)) {
-            showError(correo, "¡Ingresa un correo válido!");
+        if (!isValidEmailRegex.test(correo.value.trim())) {
+            showError(correo, "¡Solo se aceptan correos @gmail.com, @outlook.com o @yahoo.com!");
             hasError = true;
             if (!focused) { focused = true; correo.focus(); }
         }
@@ -55,6 +57,12 @@ document.addEventListener("DOMContentLoaded", () => {
             showError(mensaje, "¡El mensaje no puede estar vacío!");
             hasError = true;
             if (!focused) { focused = true; mensaje.focus(); }
+        }
+
+        if (!isEmptyRegex.test(telefono.value) && !isValidPhoneRegex.test(telefono.value.trim())) {
+            showError(telefono, "¡El teléfono debe tener 8 dígitos y empezar con 8, 9 o 2!");
+            hasError = true;
+            if (!focused) { focused = true; telefono.focus(); }
         }
 
         return !hasError;

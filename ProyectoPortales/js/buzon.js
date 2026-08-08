@@ -125,6 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 creado: Date.now()
             });
             buzonPanel.classList.remove("hidden");
+            form.reset();
         } catch (error) {
             console.error("Error guardando el mensaje:", error);
         }
