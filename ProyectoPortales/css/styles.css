@@ -1853,3 +1853,40 @@ main .intro {
     padding: 1rem;
     font-size: 0.9rem;
 }
+
+/*blog*/
+
+.consejos-container {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+
+.consejos-container .title span {
+    color: #927428;
+    font-size: 1.1rem;
+    margin-top: 0.3rem;
+}
+
+/*estado abierto*/
+.services .servicio.active .service-title {
+    background-color: #14406E !important;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.services .servicio.active .service-title:hover {
+    background-color: #1B4F82 !important;
+}
+.services .servicio.active .service-title h2 {
+    color: #ffffff !important;
+}
+
+/* contenido del consejo */
+.services .servicio .service-body p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.services .servicio .service-body strong {
+    color: #d5a837;
+}
