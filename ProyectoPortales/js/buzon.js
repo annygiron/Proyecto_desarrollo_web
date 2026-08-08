@@ -92,6 +92,8 @@ document.addEventListener("DOMContentLoaded", () => {
     onSnapshot(q, (snapshot) => {
         const mensajes = snapshot.docs.map((doc) => doc.data());
         buzonRender(mensajes);
+    }, (error) => {
+        console.error("Error leyendo mensajes de Firestore:", error);
     });
 
     buzonBtn.addEventListener("click", () => {
@@ -109,15 +111,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (!nombreValido || !correoValido || !mensajeValido) return;
 
-        await addDoc(mensajesRef, {
-            nombre: nombre.value.trim(),
-            correo: correo.value.trim(),
-            telefono: telefono.value.trim(),
-            mensaje: mensaje.value.trim(),
-            fecha: new Date().toLocaleString("es-HN"),
-            creado: Date.now()
-        });
-
-        buzonPanel.classList.remove("hidden");
+        try {
+            await addDoc(mensajesRef, {
+                nombre: nombre.value.trim(),
+                correo: correo.value.trim(),
+                telefono: telefono.value.trim(),
+                mensaje: mensaje.value.trim(),
+                fecha: new Date().toLocaleString("es-HN"),
+                creado: Date.now()
+            });
+            buzonPanel.classList.remove("hidden");
+        } catch (error) {
+            console.error("Error guardando el mensaje:", error);
+        }
     }, true);
 });
